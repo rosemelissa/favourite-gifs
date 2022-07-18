@@ -1,0 +1,35 @@
+body {
+    background: rgb(240, 240, 240);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right:0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    color: #262626;
+}
+
+#header-h1 {
+    font-family: 'Grand Hotel', cursive;
+}
+
+#header-input {
+    background-color: rgb(240, 240, 240);
+    color: gray;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px solid rgb(240, 240, 240);
+    text-indent: 10px;
+    font-size: 20px;
+}
+
+#post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
