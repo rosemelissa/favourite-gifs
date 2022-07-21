@@ -1,4 +1,9 @@
-import {PostProps} from './PostProps';
+interface PostProps {
+    location: string;
+    img: string;
+    alt: string;
+    description: string;
+}
 
 function Post(props: PostProps): JSX.Element {
     return (
