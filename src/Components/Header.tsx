@@ -6,23 +6,23 @@ interface PostProps {
     alt: string;
     description: string;
 }
-// eslint-disable-next-line
-function Header({setGifPosts, gifPosts} : {setGifPosts : Function, gifPosts : PostProps[]}): JSX.Element {
+
+interface HeaderProps {
+        // eslint-disable-next-line
+setGifPosts: Function;
+    gifPosts: PostProps[];
+}
+
+function Header({setGifPosts, gifPosts} : HeaderProps): JSX.Element {
     return (
         <div id='header'>
           <h1 id='header-h1'>Instagram</h1>
-            <input id='header-input' type='text' placeholder='Search'></input>
             <div id='header-buttons'>
                 <SubmitPost setGifPosts={setGifPosts} gifPosts={gifPosts}/>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
             </div>
+            <input id='header-input' className="input" type='text' placeholder='Search'></input>
         </div>
     );
-  
 }
 
 export default Header;

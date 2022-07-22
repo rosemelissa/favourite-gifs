@@ -9,13 +9,6 @@ interface PostProps {
   description: string;
 }
 
-// const thisgif: PostProps = {
-//         location: 'The inside of my brain',
-//         img: 'images/jimin-office.gif',
-//         alt: 'Jimin looks into the camera like he is on the office',
-//         description: 'When a family member tries to explain biochemistry to me',}
-
-
 function App(): JSX.Element {
   const [gifPosts, setGifPosts] = useState<PostProps[]>([])
   return (

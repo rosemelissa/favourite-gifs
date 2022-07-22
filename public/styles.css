@@ -13,29 +13,65 @@ body {
     align-items: center;
     background: #ffffff;
     color: #262626;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
 }
 
 #header-h1 {
     font-family: 'Grand Hotel', cursive;
+    width: 200px;
+}
+
+.input {
+    background-color: rgb(240, 240, 240);
+    color: gray;
+    border-radius: 5px;
+    border: 0px solid rgb(240, 240, 240);
+
 }
 
 #header-input {
-    background-color: rgb(240, 240, 240);
-    color: gray;
     height: 40px;
-    border-radius: 5px;
-    border: 0px solid rgb(240, 240, 240);
     text-indent: 10px;
     font-size: 20px;
+    width: 200px;
 }
 
+.submit-input {
+    height: 16px;
+    width: 180px;
+    text-indent: 5px;
+    font-size: 12px;
+    margin: 4px;
+}
 
+#submit-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 60px;
+    width: 450px;
+}
+
+#submit-button {
+    background-color: white;
+    border: 0 solid black;
+    border-radius: 5px;
+}
+
+#submit-button:hover {
+    border: 2px solid black;
+}
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: red;
+    margin-top: 70px;
 }
 
 #post {
