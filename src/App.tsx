@@ -1,6 +1,6 @@
-import Header from './Components/Header';
-import MainContent from './Components/MainContent';
-import {useState} from "react";
+import Header from "./Components/Header";
+import MainContent from "./Components/MainContent";
+import { useState } from "react";
 
 interface PostProps {
   location: string;
@@ -10,14 +10,12 @@ interface PostProps {
 }
 
 function App(): JSX.Element {
-  const [gifPosts, setGifPosts] = useState<PostProps[]>([])
+  const [gifPosts, setGifPosts] = useState<PostProps[]>([]);
   return (
     <>
-      <Header setGifPosts={setGifPosts} gifPosts={gifPosts}/>
+      <Header setGifPosts={setGifPosts} gifPosts={gifPosts} />
       <MainContent gifPosts={gifPosts} />
     </>
-
-
   );
 }
 
