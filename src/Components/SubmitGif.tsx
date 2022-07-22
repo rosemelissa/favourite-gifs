@@ -7,11 +7,11 @@ interface PostProps {
   description: string;
 }
 
-// eslint-disable-next-line
 export default function SubmitPost({
   setGifPosts,
   gifPosts,
 }: {
+  // eslint-disable-next-line
   setGifPosts: Function;
   gifPosts: PostProps[];
 }): JSX.Element {
