@@ -1,6 +1,6 @@
 import Post from './Post';
 import defaultGifs from '../defaultPosts.json';
-import { useState } from "react";
+//import { useState } from "react";
 
 // const favGifs: PostProps[] = [
 //     {
@@ -42,56 +42,59 @@ interface PostProps {
     description: string;
 }
 
-function MainContent(submittedGif : PostProps): JSX.Element {
-    const [favGifs, setFavGifs] = useState<PostProps[]>(defaultGifs);
+function MainContent({gifPosts}: {gifPosts: PostProps[]}): JSX.Element {
+    //const [favGifs, setFavGifs] = useState<PostProps[]>(defaultGifs);
 
     return (
-        <>
-            <SubmitPost setFavGifs={setFavGifs}/>
-            {favGifs.map(Post)}
-
-        </>
+        <div className="main">
+            {defaultGifs.map(Post)}
+            {gifPosts.map(Post)}
+        </div>
     );
 }
 
-interface SubmitPostProps {
-    // eslint-disable-next-line
-    setFavGifs: any;
-}
+// interface SubmitPostProps {
+//     // eslint-disable-next-line
+//     setFavGifs: any;
+// }
 
-function SubmitPost({setFavGifs}: SubmitPostProps): JSX.Element {
-    const [gifPost, setGifPost] = useState<PostProps>({
-        location: "",
-        img: "",
-        alt: "",
-        description: ""
-    })
+// function SubmitPost({setFavGifs}: SubmitPostProps): JSX.Element {
+//     const [gifPost, setGifPost] = useState<PostProps>({
+//         location: "",
+//         img: "",
+//         alt: "",
+//         description: ""
+//     })
 
-    const [locationString, setLocationString] = useState<string>("");
-    const [imgString, setImgString] = useState<string>("");
-    const [altString, setAltString] = useState<string>("");
-    const [descriptionString, setDescriptionString] = useState<string>("");
+//     const [locationString, setLocationString] = useState<string>("");
+//     const [imgString, setImgString] = useState<string>("");
+//     const [altString, setAltString] = useState<string>("");
+//     const [descriptionString, setDescriptionString] = useState<string>("");
 
-    const handleSubmit = () => {
-        const updatedGifPost: PostProps = {
-            location: locationString,
-            img: imgString,
-            alt: altString,
-            description: descriptionString
-        }
-        setGifPost(gifPost => updatedGifPost)
-        setFavGifs((prevGifs: PostProps[]) => [...prevGifs, gifPost]);
-    }
+//     const handleChange = () => {
+//         const updatedGifPost: PostProps = {
+//             location: locationString,
+//             img: imgString,
+//             alt: altString,
+//             description: descriptionString
+//         }
+//         setGifPost(gifPost => updatedGifPost)
+//     }
 
-    return (
-        <>
-        <input value={locationString} onChange={(event) => {setLocationString(event.target.value);}} placeholder="Location"/>
-        <input value={imgString} onChange={(event) => {setImgString(event.target.value)}} placeholder="GIF URL"/>
-        <input value={altString} onChange={(event) => {setAltString(event.target.value)}} placeholder="GIF alt"/>
-        <input type={descriptionString} onChange={(event) => {setDescriptionString(event.target.value)}} placeholder="Description"/>
-        <button type="button" onClick={handleSubmit}>Submit</button>;
-        </>
-    );
-}
+//     const handleSubmit = () => {
+//         handleChange();
+//         setFavGifs((prevGifs: PostProps[]) => [...prevGifs, gifPost]);
+//     }
+
+//     return (
+//         <>
+//         <input value={locationString} onChange={(event) => {setLocationString(event.target.value); handleChange()}} placeholder="Location"/>
+//         <input value={imgString} onChange={(event) => {setImgString(event.target.value); handleChange()}} placeholder="GIF URL"/>
+//         <input value={altString} onChange={(event) => {setAltString(event.target.value); handleChange()}} placeholder="GIF alt"/>
+//         <input type={descriptionString} onChange={(event) => {setDescriptionString(event.target.value); handleChange()}} placeholder="Description"/>
+//         <button type="button" onClick={handleSubmit}>Submit</button>
+//         </>
+//     );
+// }
 
 export default MainContent;

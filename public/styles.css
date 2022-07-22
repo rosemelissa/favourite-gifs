@@ -4,6 +4,7 @@ body {
     margin-bottom: 0;
     margin-left: 0;
     margin-right:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #header {
@@ -28,8 +29,24 @@ body {
     font-size: 20px;
 }
 
-#post {
+
+
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: red;
+}
+
+#post {
+    background-color: white;
+    padding: 0px 10px 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+#post-location {
+    color: #262626;
+    font-size: 12px;
 }
