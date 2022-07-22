@@ -46,13 +46,13 @@ export default function SubmitPost({
         className="input submit-input"
         value={imgString}
         onChange={(event) => setImgString(event.target.value)}
-        placeholder="Img"
+        placeholder="GIF URL"
       />
       <input
         className="input submit-input"
         value={altString}
         onChange={(event) => setAltString(event.target.value)}
-        placeholder="Alt"
+        placeholder="Alt text"
       />
       <input
         className="input submit-input"

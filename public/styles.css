@@ -86,3 +86,8 @@ body {
     color: #262626;
     font-size: 12px;
 }
+
+#post-description {
+    width: 450px;
+    overflow-wrap: break-word;
+}
