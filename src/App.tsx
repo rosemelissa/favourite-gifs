@@ -11,10 +11,16 @@ interface PostProps {
 
 function App(): JSX.Element {
   const [gifPosts, setGifPosts] = useState<PostProps[]>([]);
+  const [searchTerm, setSearchTerm] = useState<string>("");
   return (
     <>
-      <Header setGifPosts={setGifPosts} gifPosts={gifPosts} />
-      <MainContent gifPosts={gifPosts} />
+      <Header
+        setGifPosts={setGifPosts}
+        gifPosts={gifPosts}
+        setSearchTerm={setSearchTerm}
+        searchTerm={searchTerm}
+      />
+      <MainContent gifPosts={gifPosts} searchTerm={searchTerm} />
     </>
   );
 }
