@@ -16,7 +16,7 @@ interface HeaderProps {
 function Header({ setGifPosts, gifPosts }: HeaderProps): JSX.Element {
   return (
     <div id="header">
-      <h1 id="header-h1">Instagram</h1>
+      <h1 id="header-h1">Melistagram</h1>
       <div id="header-buttons">
         <SubmitPost setGifPosts={setGifPosts} gifPosts={gifPosts} />
       </div>
