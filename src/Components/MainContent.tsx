@@ -26,7 +26,7 @@ function MainContent({ gifPosts, searchTerm }: MainContentProps): JSX.Element {
       }
     }
   }
-
+  //todo^ abstract that out
   return <div className="main">{currentGifs.map(Post)}</div>;
 }
 
